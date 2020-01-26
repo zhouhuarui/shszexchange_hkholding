@@ -1,3 +1,3 @@
 from szse import szDataDownload
 
-szDataDownload("2020-09-09")
+szDataDownload("2022-09-09")
