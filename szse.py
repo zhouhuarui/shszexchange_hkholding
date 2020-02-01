@@ -8,7 +8,7 @@ import requests
 def szDataDownload(dataDate):
 
     # dataDate = "2020-01-26"
-    outputPath = "D:/工作/shszexchange_hkholding/shszexchange_hkholding/SZDailyDataFiles/"
+    outputPath = "D:/Projects/shszexchange_hkholding/shszexchange_hkholding/SZDailyDataFiles/"
 
     #下载地址
     fileAddress1 = "http://www.szse.cn/api/report/ShowReport?SHOWTYPE=xlsx"
