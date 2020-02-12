@@ -7,8 +7,8 @@ import requests
 
 def szDataDownload(dataDate):
 
-    # dataDate = "2020-01-26"
-    outputPath = "D:/Projects/shszexchange_hkholding/shszexchange_hkholding/SZDailyDataFiles/"
+    #读取深交所数据文件，返回文件
+    #若需要下载至本地请读取返回f.content
 
     #下载地址
     fileAddress1 = "http://www.szse.cn/api/report/ShowReport?SHOWTYPE=xlsx"
@@ -16,9 +16,16 @@ def szDataDownload(dataDate):
 
     #把下载地址发送给requests模块
     f = requests.get(fileAddress1 + fileAddress2)
+ 
+    return f
 
-    #下载文件
-    with open(outputPath + "深股通持股数量_%s.xlsx" % dataDate,"wb") as dailyData:
-        
-        dailyData.write(f.content)
+#test case
 
+# dataDate = "2020-02-11"
+# outputPath = "D:/Projects/shszexchange_hkholding/shszexchange_hkholding/SZDailyDataFiles/"   
+
+# with open(outputPath + "深股通持股数量_%s.xlsx" % dataDate,"wb") as dailyData:
+    
+#     dailyData.write(szDataDownload(dataDate).content)
+
+# print (szDataDownload(dataDate).content)
